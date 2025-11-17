@@ -4,7 +4,7 @@ import Fade from "@/app/component/fade";
 export default function Home() {
   return (
     <div className="w-full flex flex-col items-center justify-center mt-10">
-      <Fade className="bg-stone-900 w-4/5 flex-col flex justify-center items-center rounded-2xl text-white text-4xl font-bold mt-10 p-10">
+      <Fade className="bg-stone-900 w-4/5 md:w-4/5 flex-col flex justify-center items-center rounded-2xl text-white text-4xl font-bold mt-10 p-10">
         <div id="introduction-section">
           <h1 className="pt-[20px] pb-[20px]">INTRODUCTION</h1>
           <p className="text-[30px] pl-[30px] pr-[30px] pb-[20px] leading-relaxed">

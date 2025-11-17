@@ -2,45 +2,78 @@ import Link from "next/link"
 import Image from "next/image";
 import Fade from "./fade";
 
-const header = () => {
-    return<div id="top">
-        <Fade className="fixed top-0 left-0 right-0 z-50 bg-stone-900 flex p-10 justify-between items-center w-4/5 mx-auto rounded-xl text-2xl">
-    
-            <div className="flex justify-between w-full">
-                <a href="#top" className="cursor-pointer">Nathaniel Alvarez</a>
+const Header = () => {
+  return (
+    <div id="top">
+      {/* NAV BAR */}
+      <Fade className="
+        fixed top-0 left-0 right-0 z-50 
+        bg-stone-900 
+        flex p-4 md:p-6 
+        justify-between items-center 
+        w-full md:w-4/5 mx-auto 
+        rounded-none md:rounded-xl 
+        text-lg md:text-2xl
+      ">
+        <a href="#top" className="cursor-pointer font-bold">
+          Nathaniel Alvarez
+        </a>
 
-                <div className="flex flex-row gap-[10px]">
-                    <a href="#introduction-section" className="cursor-pointer">About me</a>
-                    <a href="#education-section" className="cursor-pointer">Education</a>
-                    <a href="#languages-section" className="cursor-pointer">Languages</a>
-                    <a href="#contact-section" className="cursor-pointer">Contact</a>
-                </div>
-            </div>
-        </Fade>
+        <div className="hidden md:flex flex-row gap-6">
+          <a href="#introduction-section" className="cursor-pointer">About me</a>
+          <a href="#education-section" className="cursor-pointer">Education</a>
+          <a href="#languages-section" className="cursor-pointer">Languages</a>
+          <a href="#contact-section" className="cursor-pointer">Contact</a>
+        </div>
+      </Fade>
 
-        <Fade className="w-4/5 bg-stone-900 flex items-center justify-center flex-col mx-auto rounded-xl pt-10 mt-40">
-            <Image 
-            src ="/profile.jpg"
-            width={500}
-            height={500}
-            className="rounded-full"
-            
-            alt="profile"
-            />
-            <h2 className="text-white text-[60px] font-bold pt-[20px]">Nathaniel Alvarez</h2>
-            <p className="max-w-[500px] w-full text-white text-center pb-10 text-3xl" >Software Developer</p>
-            <nav className="flex justify-center pb-[30px] gap-[30px]">
-              <Link href="https://www.facebook.com/nathaniel.alvarez.9809">
-                <img src="/fb_logo.png" width={40} height={40} className="filter grayscale hover:grayscale-0 transition ease-in-out duration-500" alt="Facebook" />
-              </Link>
-              <Link href="https://www.instagram.com/usernathfound___/">
-                <img src="/instagram-logo-colored.jpg" width={40} height={40} className="rounded-full filter grayscale hover:grayscale-0 transition ease-in-out duration-500" alt="Instagram" />
-              </Link>
-            </nav>
-            <button className="bg-transparent border-2 border-white p-[10px] rounded-[5px] text-[30px] mb-[30px] hover:border-cyan-300 hover:text-cyan-300 transition-all ease-in-out duration-500 self-end mr-[30px]">Contact me</button>
-        </Fade>
+      {/* HERO SECTION */}
+      <Fade className="
+        w-full md:w-4/5 
+        bg-stone-900 flex flex-col items-center 
+        mx-auto rounded-xl 
+        p-6 md:p-10 
+        mt-36 md:mt-40
+      ">
+        <Image 
+          src="/profile.jpg"
+          width={300}
+          height={300}
+          className="rounded-full w-[180px] h-[180px] md:w-[300px] md:h-[300px]"
+          alt="profile"
+        />
 
+        <h2 className="text-white text-4xl md:text-6xl font-bold pt-5">
+          Nathaniel Alvarez
+        </h2>
+
+        <p className="max-w-[500px] text-white text-center pb-8 text-lg md:text-2xl">
+          Software Developer
+        </p>
+
+        <nav className="flex justify-center pb-5 gap-7">
+          <Link href="https://www.facebook.com/nathaniel.alvarez.9809">
+            <img src="/fb_logo.png" width={40} className="filter grayscale hover:grayscale-0 transition duration-500" />
+          </Link>
+          <Link href="https://www.instagram.com/usernathfound___/">
+            <img src="/instagram-logo-colored.jpg" width={40} className="rounded-full filter grayscale hover:grayscale-0 transition duration-500" />
+          </Link>
+        </nav>
+
+        <button className="
+          bg-transparent border-2 border-white 
+          p-2 md:p-3 rounded-md 
+          text-xl md:text-3xl 
+          mb-5 opacity-80 
+          hover:opacity-100 hover:bg-gray-700 
+          transition duration-500 
+          self-end mr-5
+        ">
+          Contact me
+        </button>
+      </Fade>
     </div>
+  )
 }
 
-export default header;
+export default Header;
