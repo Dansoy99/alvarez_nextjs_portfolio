@@ -75,49 +75,41 @@ const Home = () => {
         mt-10 mb-10 p-6 md:p-10
       ">
         <div id="contact-section">
-          <h1 className="pb-5 text-3xl md:text-4xl font-bold">CONTACT</h1>
+          <h1 className="pb-5 text-4xl md:text-5xl">CONTACT</h1>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            {/* LEFT */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full">
+
+            {/* LEFT SIDE */}
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold">Lets work together!</h2>
-              <p className="mt-6 text-lg md:text-2xl">
-                I am always open to discussing new projects, creative ideas, or opportunities
-                to be part of your visions. Feel free to reach out to discuss your project!.
+              <h2 className="text-2xl md:text-3xl font-semibold">Lets work together!</h2>
+
+              <p className="mt-6 text-lg md:text-xl leading-relaxed">
+                I am always open to discussing new projects, creative ideas, or
+                opportunities to be part of your visions. Feel free to reach out
+                to discuss your project!
               </p>
 
-              <div className="
-                group flex items-center mt-10 gap-4 
-                w-fit border-2 border-white 
-                p-4 rounded-md 
-                hover:border-cyan-300 
-                transition duration-500
-              ">
-                <AiOutlineMail 
-                  size={50} 
-                  className="text-white group-hover:text-cyan-300 transition duration-500"
-                />
-                <div className="flex flex-col group-hover:text-cyan-300 transition duration-500">
-                  <p className="font-bold">Email</p>
-                  <p>alvareznathaniel2003@gmail.com</p>
+              <div className="group flex items-center mt-8 gap-4 w-full md:w-fit border-2 border-white p-4 rounded-lg hover:border-cyan-300 transition-all">
+                <AiOutlineMail size={50} className="text-white group-hover:text-cyan-300 transition-all" />
+                <div className="flex flex-col group-hover:text-cyan-300 transition-all">
+                  <p className="font-bold text-xl">Email</p>
+                  <p className="text-lg break-all">alvareznathaniel2003@gmail.com</p>
                 </div>
               </div>
             </div>
 
-            {/* RIGHT */}
+            {/* RIGHT SIDE */}
             <div className="flex justify-center">
-              <img 
-                src="/contactProfile.jpg" 
-                className="
-                  rounded-xl 
-                  h-[300px] w-[300px] 
-                  md:h-[200px] md:w-[200px] 
-                  object-cover
-                "
+              <img
+                src="/contactProfile.jpg"
+                alt="profile"
+                className="rounded-xl object-cover h-[180px] w-[180px] md:h-[260px] md:w-[260px]"
               />
             </div>
+
           </div>
         </div>
+
       </Fade>
 
     </div>
