@@ -21,7 +21,6 @@ const Header = () => {
         text-white text-lg md:text-2xl
       "
     >
-      {/* LEFT: NAME */}
       <a
         href="#very-top"
         className="cursor-pointer font-bold tracking-wide hover:text-cyan-300 transition"
@@ -29,7 +28,6 @@ const Header = () => {
         Nathaniel Alvarez
       </a>
 
-      {/* DESKTOP NAV */}
       <nav className="hidden md:flex gap-8 text-xl">
         <a href="#introduction-section" className="hover:text-cyan-300 transition">About me</a>
         <a href="#education-section" className="hover:text-cyan-300 transition">Education</a>
@@ -37,7 +35,6 @@ const Header = () => {
         <a href="#contact-section" className="hover:text-cyan-300 transition">Contact</a>
       </nav>
 
-      {/* MOBILE MENU BUTTON */}
       <button
         className="md:hidden text-white"
         onClick={() => setIsOpen(!isOpen)}
@@ -45,7 +42,6 @@ const Header = () => {
         {isOpen ? <X size={30} /> : <Menu size={30} />}
       </button>
 
-      {/* MOBILE DROPDOWN MENU */}
       {isOpen && (
         <div
           className="
